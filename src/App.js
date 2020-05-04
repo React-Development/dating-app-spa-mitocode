@@ -1,10 +1,12 @@
 import React from "react";
 import "./App.css";
 
+import Values from "./Values";
+
 function App() {
   return (
     <div className="App">
-      <p>Mi primer proyecto en React</p>
+      <Values />
     </div>
   );
 }

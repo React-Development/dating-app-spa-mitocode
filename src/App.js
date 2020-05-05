@@ -2,12 +2,13 @@ import React from "react";
 import "./App.css";
 
 import Values from "./Values";
+import Layout from "./hoc/Layout";
 
 function App() {
   return (
-    <div className="App">
-      <Values />
-    </div>
+    <React.Fragment>
+      <Layout />
+    </React.Fragment>
   );
 }
 

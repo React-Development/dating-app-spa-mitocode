@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "../components/Navigation/Navigation";
+import Routes from "./Routes";
 
 const Layout = () => {
   return (
@@ -7,7 +8,7 @@ const Layout = () => {
       <Navigation />
 
       <main className="container">
-        <div>Componentes Hijos</div>
+        <Routes />
       </main>
     </React.Fragment>
   );

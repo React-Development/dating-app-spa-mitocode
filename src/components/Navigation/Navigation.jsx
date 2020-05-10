@@ -9,7 +9,25 @@ import {
   NavLink,
 } from "reactstrap";
 
+import { NavLink as NavLinkRouter } from "react-router-dom";
+
 const Navigation = () => {
+  let toolbarMenu = null;
+  toolbarMenu = (
+    <Nav navbar>
+      <NavItem>
+        <NavLink tag={NavLinkRouter} exact to="/members">
+          Matches
+        </NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink tag={NavLinkRouter} exact to="/lists">
+          Lists
+        </NavLink>
+      </NavItem>
+    </Nav>
+  );
+
   return (
     <React.Fragment>
       <Navbar
@@ -17,9 +35,11 @@ const Navigation = () => {
         light
         expand="md"
       >
-        <NavbarBrand>FindYourMatch.com</NavbarBrand>
+        <NavbarBrand tag={NavLinkRouter} exact to="/">
+          FindYourMatch.com
+        </NavbarBrand>
         <NavbarToggler></NavbarToggler>
-        <Collapse navbar>{"toolbarMenu"}</Collapse>
+        <Collapse navbar>{toolbarMenu}</Collapse>
         {"userInfoArea"}
       </Navbar>
     </React.Fragment>
